@@ -23,7 +23,7 @@ function BookList() {
           console.log(err);
         }
       });
-  }, []);
+  }, []); // Empty dependency array ensures the effect runs only once on mount
 
   const filterBook = data.filter((item) =>
     item.title.toLowerCase().includes(searchItem.toLowerCase())
